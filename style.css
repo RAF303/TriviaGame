@@ -1,0 +1,28 @@
+#questionText {
+    font-weight: 600;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#choicesB {
+    display: inline-block;
+    opacity: 100;
+    position: relative;
+    top: 4.7em;
+    font-weight: 600;
+}
+
+#jumbotron {
+    margin: 100px;
+    height: -5px;
+    opacity: 0.8;
+    color: rgb(221, 205, 210);
+    padding: 170px;
+}
+
+#header {
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 20px;
+    font-family: Shojumaru;
+}
