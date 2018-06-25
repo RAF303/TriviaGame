@@ -15,19 +15,21 @@
 
 </head>
 
-<body background="Dragon-Ball.jpg">
+<body id="body">
     <div class="layout">
-        <h1 id="header">ULTIMATE DRAGON BALL Z FAN QUIZ</h1>
 
+
+        <h1 id="header">ULTIMATE DRAGON BALL Z FAN QUIZ</h1>
+        <h2 id="questionText"></h2>
 
         <div class="jumbotron" id="jumbotron">
-            <h2 id="questionText"></h2>
+
 
             <div id="buttons">
-                <!-- <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-                        <button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
-                        <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-                        <button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button> -->
+                <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+                <button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+                <button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
             </div>
 
         </div>
@@ -52,7 +54,7 @@
             var incorrectA = 0;
             var questionIndex = 0;
             var questions = [{
-                    questionText: "whats Goku's birth name",
+                    questionText: "what is Goku's birth name",
                     correctAwnser: "Kakarot",
                     choices: ["Kakarot", "Philup", "Clark Kent", "Archie"]
                 },
@@ -62,7 +64,7 @@
                     choices: ["1", "10", "5", "100"]
                 },
                 {
-                    questionText: "How many dragon balls are there",
+                    questionText: "How many dragon balls are needed to make a wish",
                     correctAwnser: "7",
                     choices: ["5", "13", "7", "12"]
                 },
@@ -84,7 +86,7 @@
                 {
                     questionText: "Who is Gokus Grandfather",
                     correctAwnser: "Gohan",
-                    choices: ["Gohan", "Hercule", "Joe Biden", "All Might"]
+                    choices: ["Gohan", "Hercule", "John Elway", "All Might"]
                 },
             ]
 
@@ -100,6 +102,9 @@
                         button.attr("id", "choicesB")
                         button.attr("name", currentQuestion.choices[i])
                         $("#buttons").append(button)
+                        $("#buttons").attr("class", "bootstrap class")
+
+
                     }
                 } else {
                     endGame();
@@ -124,8 +129,12 @@
 
             function endGame() {
                 console.log("endGame");
-                $("#questionText").html("Your Score was");
-                $("#buttons").html("You got " + correctA + "right" + "You got " + incorrectA + "wrong");
+                $("#questionText").html("Your Score was Correct: " + correctA + " Incorrect: " + incorrectA);
+                var newB = $("<button>")
+                newB.attr("id", "newB")
+                newB.attr("Try Again")
+                $("#buttons").append(newB)
+
             }
 
         })

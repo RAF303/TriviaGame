@@ -1,15 +1,30 @@
 #questionText {
+    /* font-weight: 600;
+    margin-left: 25%;
+    margin-right: 10%; */
     font-weight: 600;
-    margin-left: 10%;
+    margin-left: 25%;
     margin-right: 10%;
+    position: relative;
+    top: 200px;
+    z-index: 2;
+    opacity: 1;
+    font-family: Shojumaru;
 }
 
 #choicesB {
     display: inline-block;
-    opacity: 100;
     position: relative;
     top: 4.7em;
     font-weight: 600;
+    z-index: 2;
+    opacity: 1;
+    font-family: Shojumaru;
+    padding: 5px;
+    margin: 5px;
+    background-color: greenyellow;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 #jumbotron {
@@ -25,4 +40,9 @@
     margin-right: 15%;
     padding: 20px;
     font-family: Shojumaru;
+}
+
+#body {
+    background-image: url(Dragon-Ball.jpg);
+    background-size: 100%;
 }
